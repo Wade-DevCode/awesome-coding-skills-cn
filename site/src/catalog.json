@@ -94,6 +94,72 @@
     "path": "skills/cocos-creator/SKILL.md"
   },
   {
+    "name": "cocos-creator-adaptation",
+    "description": "做 Cocos Creator 多机型/多分辨率适配时使用。Canvas、Widget、安全区。",
+    "category": "gamedev",
+    "tags": [
+      "cocoscreator",
+      "适配",
+      "ui"
+    ],
+    "path": "skills/cocos-creator-adaptation/SKILL.md"
+  },
+  {
+    "name": "cocos-creator-bundle",
+    "description": "Cocos Creator 用 AssetBundle 做分包/远程资源时使用。加载、释放、依赖、缓存。",
+    "category": "gamedev",
+    "tags": [
+      "cocoscreator",
+      "bundle",
+      "资源"
+    ],
+    "path": "skills/cocos-creator-bundle/SKILL.md"
+  },
+  {
+    "name": "cocos-creator-drawcall",
+    "description": "优化 Cocos Creator 渲染性能时使用。合批、图集、动静分离、Label。",
+    "category": "gamedev",
+    "tags": [
+      "cocoscreator",
+      "性能",
+      "drawcall"
+    ],
+    "path": "skills/cocos-creator-drawcall/SKILL.md"
+  },
+  {
+    "name": "cocos-creator-hotupdate",
+    "description": "给 Cocos Creator 原生包做热更新时使用。version manifest、增量、校验、回滚。",
+    "category": "gamedev",
+    "tags": [
+      "cocoscreator",
+      "热更新",
+      "发布"
+    ],
+    "path": "skills/cocos-creator-hotupdate/SKILL.md"
+  },
+  {
+    "name": "cocos-creator-tween-anim",
+    "description": "写 Cocos Creator 动效/动画时使用。tween、Animation、Spine、性能与清理。",
+    "category": "gamedev",
+    "tags": [
+      "cocoscreator",
+      "动画",
+      "tween"
+    ],
+    "path": "skills/cocos-creator-tween-anim/SKILL.md"
+  },
+  {
+    "name": "cocos-creator-ui-list",
+    "description": "做 Cocos Creator 大量条目列表时使用。虚拟列表、节点复用。",
+    "category": "gamedev",
+    "tags": [
+      "cocoscreator",
+      "性能",
+      "列表"
+    ],
+    "path": "skills/cocos-creator-ui-list/SKILL.md"
+  },
+  {
     "name": "cocos2dx-lua",
     "description": "写 Cocos2d-x Lua 时使用。节点、触摸、动作、调度器、ccui、内存的实战规范。",
     "category": "gamedev",
