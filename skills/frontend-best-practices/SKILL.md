@@ -1,6 +1,8 @@
 ---
 name: frontend-best-practices
 description: 写 React/Vue 前端代码时使用。组件、状态、性能、可访问性的实战规范。
+category: frontend
+tags: [react, vue, 性能, 可访问性]
 ---
 
 # 前端最佳实践

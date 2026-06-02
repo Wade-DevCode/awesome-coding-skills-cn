@@ -1,6 +1,8 @@
 ---
 name: legacy-safe-edit
 description: 在已有/老代码库里改动时使用。最大限度降低改崩存量功能的风险。
+category: discipline
+tags: [老项目, 安全改动]
 ---
 
 # 改老项目不崩

@@ -1,6 +1,8 @@
 ---
 name: <kebab-case-英文-slug>
 description: <一句话,说明何时触发此技能。中文。>
+category: <discipline|frontend|backend|devops|security|language|testing|docs|performance|china>
+tags: [标签1, 标签2]
 ---
 
 # <技能中文名>

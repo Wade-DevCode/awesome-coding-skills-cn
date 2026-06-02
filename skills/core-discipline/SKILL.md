@@ -1,6 +1,8 @@
 ---
 name: core-discipline
 description: 写/改任何代码前必读。约束 AI 避免造假 API、过度工程、大范围乱改。
+category: discipline
+tags: [纪律, api, yagni]
 ---
 
 # 核心纪律

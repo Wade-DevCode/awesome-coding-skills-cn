@@ -1,6 +1,8 @@
 ---
 name: systematic-debugging
 description: 遇到 bug、测试失败、行为异常时使用。先定位根因,再改代码,禁止瞎试。
+category: discipline
+tags: [调试, 根因, 复现]
 ---
 
 # 系统化调试
