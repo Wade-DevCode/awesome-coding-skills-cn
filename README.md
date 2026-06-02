@@ -15,6 +15,21 @@
 
 ---
 
+## ⚡ 30 秒上手
+
+```bash
+git clone https://github.com/Wade-DevCode/awesome-coding-skills-cn.git
+cd awesome-coding-skills-cn && bash install.sh   # 装全部 30 技能;Windows 用 ./install.ps1
+```
+
+> 不装也行:把 [`CLAUDE.md`](CLAUDE.md) 拖进项目根目录,立刻生效。
+> 嫌每次提醒麻烦?配 [`hooks/`](hooks/) 让纪律自动注入每次对话。
+> 想先逛逛:[在线目录站](https://wade-devcode.github.io/awesome-coding-skills-cn/) · [实战对照](showcase/README.md)
+>
+> **顺手点个 ⭐ Star,帮更多中文开发者刷到它。**
+
+---
+
 ## 这是什么 / What is this
 
 这是一套专为中文开发者打磨的 AI 编程纪律技能集，覆盖 Claude Code、Codex、Cursor、Gemini CLI 等主流 AI 编程工具。每个技能都是从真实踩坑中提炼的可执行规则，不是理论口号。
@@ -72,6 +87,21 @@ node bin/skills.js install security  # 安装单个技能 / 整个分类 / all
 ```
 
 `install` 会把技能拷到 `~/.claude/skills/`。数据源为 `catalog.json`(由 `node scripts/build-catalog.mjs` 生成)。
+
+---
+
+### 方式 D — 自动钩子(给 AI 戴紧箍咒)
+
+不想每次提醒?用 **Claude Code hooks** 把核心纪律自动注入每次对话。一次配置,永久生效:
+
+```jsonc
+// 合并进 ~/.claude/settings.json
+{ "hooks": { "SessionStart": [ { "hooks": [
+  { "type": "command", "command": "bash <仓库路径>/hooks/inject-discipline.sh" }
+] } ] } }
+```
+
+完整说明(含 Windows / UserPromptSubmit 版本)见 [`hooks/`](hooks/)。
 
 ---
 
@@ -168,6 +198,7 @@ node bin/skills.js install security  # 安装单个技能 / 整个分类 / all
 | **Claude Code** | 方式 A（`install.sh` / `install.ps1`）安装 skills，或方式 B 放 `CLAUDE.md` |
 | **Codex / Cursor / Gemini CLI** | 方式 B 放 `AGENTS.md` 到项目根目录 |
 | **任何支持 system prompt 的 AI 工具** | 把 `CLAUDE.md` 内容贴入 system prompt |
+| **想自动注入纪律** | 方式 D 配置 [`hooks/`](hooks/),每次对话自动生效 |
 
 ---
 
@@ -177,6 +208,47 @@ node bin/skills.js install security  # 安装单个技能 / 整个分类 / all
 - **⚔️ 实战纪律，不是最佳实践清单** — 规则带有"为什么"和反例，AI 理解后才真正遵守，而不是走过场
 - **🌐 跨平台即插即用** — Claude Code 技能 + CLAUDE.md + AGENTS.md 三种形态，覆盖主流 AI 编程工具
 - **🇨🇳 中文优先，面向中国开发者** — 规则用中文写就更精准，AI 解读时不会因翻译损失语义
+
+---
+
+## 和其他做法比 / Comparison
+
+| | 啥都不做 | 一句 CLAUDE.md | **本仓库** |
+|---|:---:|:---:|:---:|
+| 覆盖纪律面 | ❌ | 几条 | ✅ 30 技能 / 10 分类 |
+| 带"为什么"+反例 | ❌ | 偶尔 | ✅ 每条都有 |
+| 跨平台(Claude/Codex/Cursor/Gemini) | ❌ | 部分 | ✅ |
+| 按需选装 / CLI 浏览 | ❌ | ❌ | ✅ `bin/skills.js` |
+| 自动注入(hooks) | ❌ | ❌ | ✅ 见 [`hooks/`](hooks/) |
+| 中文优先 | ❌ | 看作者 | ✅ |
+| 可视化目录 | ❌ | ❌ | ✅ [在线站点](https://wade-devcode.github.io/awesome-coding-skills-cn/) |
+
+---
+
+## 常见问题 / FAQ
+
+**Q:和 Karpathy 那个 CLAUDE.md 有啥区别?**
+那是一个文件、几条通用纪律。这里是 30 个分门别类的技能,每条带"为什么+正反例",还有 CLI、自动钩子、可视化目录,且**中文优先**。
+
+**Q:只用 Claude Code 吗?**
+不。`skills/` 给 Claude Code;`CLAUDE.md` / `AGENTS.md` 给 Codex / Cursor / Gemini / 任何读 system prompt 的工具。
+
+**Q:会拖慢 AI 吗?**
+不会。技能是按场景触发的轻量规则文本,不是常驻大上下文。
+
+**Q:能只装我需要的吗?**
+能。`node bin/skills.js install <技能名|分类|all>` 按需选装。
+
+**Q:能改成我团队的规约吗?**
+能。每个 `SKILL.md` 都是纯 markdown,直接改;钩子脚本里的纪律文本也能换。
+
+---
+
+## ⭐ 觉得有用?
+
+点个 Star 让更多中文开发者刷到它 —— 这是对项目最大的支持。也欢迎提 PR 贡献你踩过的坑(见 [CONTRIBUTING](CONTRIBUTING.md))。
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Wade-DevCode/awesome-coding-skills-cn&type=Date)](https://star-history.com/#Wade-DevCode/awesome-coding-skills-cn&Date)
 
 ---
 
