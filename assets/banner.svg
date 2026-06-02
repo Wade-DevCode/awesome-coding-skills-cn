@@ -1,0 +1,79 @@
+<svg width="1280" height="440" viewBox="0 0 1280 440" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#15110c"/>
+      <stop offset="1" stop-color="#0d0b08"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.28" cy="0.0" r="0.9">
+      <stop offset="0" stop-color="#ff7849" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#ff7849" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.95" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#e8b04b" stop-opacity="0.20"/>
+      <stop offset="0.6" stop-color="#e8b04b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff8a5c"/>
+      <stop offset="1" stop-color="#e8602f"/>
+    </linearGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#ffffff" fill-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="440" rx="20" fill="url(#bg)"/>
+  <rect width="1280" height="440" rx="20" fill="url(#dots)"/>
+  <rect width="1280" height="440" rx="20" fill="url(#glow)"/>
+  <rect width="1280" height="440" rx="20" fill="url(#glow2)"/>
+  <rect x="0.5" y="0.5" width="1279" height="439" rx="20" fill="none" stroke="#3a3024" stroke-opacity="0.6"/>
+
+  <!-- left accent bar -->
+  <rect x="72" y="92" width="4" height="256" rx="2" fill="url(#coral)"/>
+
+  <!-- kicker -->
+  <text x="96" y="118" font-size="17" letter-spacing="3" fill="#e8b04b" font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace">中文优先 · Claude Code / Codex / Cursor / Gemini</text>
+
+  <!-- title -->
+  <text x="94" y="214" font-size="92" font-weight="800" fill="#fdf6ec" letter-spacing="2">AI 编程内功</text>
+
+  <!-- english subtitle -->
+  <text x="96" y="256" font-size="22" fill="#b9aE99" font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" fill-opacity="0.85">Top-tier AI Coding Skills for Claude Code &amp; Codex</text>
+
+  <!-- tagline -->
+  <text x="96" y="300" font-size="24" fill="#d8cebf">AI 改代码总把项目改崩?给它装上工程纪律,像 10 年老兵一样干活。</text>
+
+  <!-- stat chips -->
+  <g font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace">
+    <rect x="96" y="332" width="132" height="40" rx="20" fill="#ff7849" />
+    <text x="162" y="358" font-size="18" font-weight="700" fill="#1a0f07" text-anchor="middle">46 技能</text>
+
+    <rect x="240" y="332" width="120" height="40" rx="20" fill="none" stroke="#3a3024"/>
+    <text x="300" y="358" font-size="17" fill="#d8cebf" text-anchor="middle">11 分类</text>
+
+    <rect x="372" y="332" width="210" height="40" rx="20" fill="none" stroke="#e85d9a" stroke-opacity="0.7"/>
+    <text x="477" y="358" font-size="17" fill="#f0a7c8" text-anchor="middle">🎮 游戏开发 16 技能</text>
+  </g>
+
+  <!-- right: engine badges stack -->
+  <g font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="19">
+    <rect x="892" y="120" width="296" height="48" rx="12" fill="#1d1812" stroke="#3a3024"/>
+    <circle cx="922" cy="144" r="6" fill="#ff7849"/>
+    <text x="942" y="151" fill="#ece2d3">Unity · C#</text>
+
+    <rect x="892" y="180" width="296" height="48" rx="12" fill="#1d1812" stroke="#3a3024"/>
+    <circle cx="922" cy="204" r="6" fill="#e85d9a"/>
+    <text x="942" y="211" fill="#ece2d3">Cocos Creator / 2d-x</text>
+
+    <rect x="892" y="240" width="296" height="48" rx="12" fill="#1d1812" stroke="#3a3024"/>
+    <circle cx="922" cy="264" r="6" fill="#e8b04b"/>
+    <text x="942" y="271" fill="#ece2d3">Unreal · C++ / 蓝图</text>
+
+    <rect x="892" y="300" width="296" height="48" rx="12" fill="#1d1812" stroke="#3a3024"/>
+    <circle cx="922" cy="324" r="6" fill="#5fb0a1"/>
+    <text x="942" y="331" fill="#ece2d3">Godot · GDScript</text>
+  </g>
+
+  <!-- small footer tag -->
+  <text x="892" y="380" font-size="14" fill="#7d7366" font-family="'JetBrains Mono',monospace" fill-opacity="0.8">MIT · 中文优先 · 开源</text>
+</svg>

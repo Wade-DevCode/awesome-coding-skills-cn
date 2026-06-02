@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://wade-devcode.github.io/awesome-coding-skills-cn/">
+    <img src="./assets/banner.svg" alt="AI 编程内功 · 顶级 AI 编程技能集(46 技能,含游戏开发专项)" width="100%">
+  </a>
+</p>
+
 # 🤖 顶级 AI 编程技能集（中文优先）
 ### Top-tier AI Coding Skills for Claude Code / Codex — China-first, bilingual
 
