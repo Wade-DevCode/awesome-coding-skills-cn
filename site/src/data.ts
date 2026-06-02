@@ -24,6 +24,7 @@ export interface CatMeta {
 // muted, warm-harmonized palette to match the editorial coral/gold theme
 export const CATEGORIES: CatMeta[] = [
   { key: "discipline",  label: "通用纪律", en: "Discipline",  from: "#ff7849", to: "#e8602f" },
+  { key: "gamedev",     label: "游戏开发", en: "Game Dev",    from: "#e85d9a", to: "#cf3f7e" },
   { key: "frontend",    label: "前端",     en: "Frontend",    from: "#e0789e", to: "#c95f86" },
   { key: "backend",     label: "后端",     en: "Backend",     from: "#7aa6cf", to: "#5e8bb8" },
   { key: "devops",      label: "DevOps",   en: "DevOps",      from: "#86ab74", to: "#6c9159" },
