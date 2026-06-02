@@ -1,16 +1,21 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Search, Star, Terminal, Sparkles, ArrowRight } from "lucide-react";
-import Aurora from "./components/Aurora";
+import Particles from "./reactbits/Particles";
+import BlurText from "./reactbits/BlurText";
+import CountUp from "./reactbits/CountUp";
 import SkillCard from "./components/SkillCard";
 import { SKILLS, CATEGORIES, REPO, countByCat } from "./data";
 
 const SITE = REPO;
 
-function Stat({ n, label }: { n: string; label: string }) {
+function Stat({ value, suffix, label }: { value: number | string; suffix?: string; label: string }) {
   return (
     <div className="flex flex-col">
-      <span className="font-display text-4xl font-extrabold text-gradient sm:text-5xl">{n}</span>
+      <span className="font-display text-4xl font-extrabold text-gradient sm:text-5xl">
+        {typeof value === "number" ? <CountUp to={value} duration={1.6} /> : value}
+        {suffix}
+      </span>
       <span className="mt-1 font-mono text-[11px] uppercase tracking-[0.2em] text-fog">{label}</span>
     </div>
   );
@@ -38,7 +43,26 @@ export default function App() {
     <div className="relative min-h-screen">
       {/* ---------------- HERO ---------------- */}
       <section className="relative">
-        <Aurora />
+        {/* React Bits particle field + warm depth glow */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0">
+            <Particles
+              particleColors={["#ff7849", "#e8b04b", "#d2603f", "#f4efe9"]}
+              particleCount={260}
+              particleSpread={11}
+              speed={0.08}
+              particleBaseSize={90}
+              moveParticlesOnHover
+              particleHoverFactor={1.5}
+              alphaParticles
+              disableRotation={false}
+            />
+          </div>
+          <div
+            className="absolute inset-0"
+            style={{ background: "radial-gradient(ellipse 70% 55% at 50% -8%, #ff784922, transparent 70%)" }}
+          />
+        </div>
         <div className="relative mx-auto max-w-6xl px-6 pt-10 sm:pt-14">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-2 font-mono text-sm text-white/80">
@@ -66,14 +90,12 @@ export default function App() {
               中文优先 · Claude Code / Codex / Cursor / Gemini
             </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-              className="font-display text-6xl font-extrabold leading-[0.95] tracking-tight sm:text-8xl"
-            >
-              <span className="text-gradient">AI 编程内功</span>
-            </motion.h1>
+            <BlurText
+              text="AI 编程内功"
+              animateBy="words"
+              delay={180}
+              className="font-display text-6xl font-black leading-[0.95] tracking-tight text-[#fff6ec] sm:text-8xl"
+            />
 
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -115,9 +137,9 @@ export default function App() {
               transition={{ duration: 0.6, delay: 0.28 }}
               className="mt-14 flex gap-12"
             >
-              <Stat n={String(SKILLS.length)} label="Skills 技能" />
-              <Stat n={String(CATEGORIES.filter((c) => counts[c.key]).length)} label="Categories 分类" />
-              <Stat n="MIT" label="License 许可" />
+              <Stat value={SKILLS.length} label="Skills 技能" />
+              <Stat value={CATEGORIES.filter((c) => counts[c.key]).length} label="Categories 分类" />
+              <Stat value="MIT" label="License 许可" />
             </motion.div>
           </div>
         </div>
