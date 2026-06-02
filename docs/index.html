@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI 编程内功 · 30 技能 | Top-tier AI Coding Skills for Claude Code & Codex</title>
+<meta name="description" content="面向中文开发者的 Claude Code / Codex 顶级 AI 编程技能全家桶。30 个实战技能,10 大分类,中文优先。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0b0c0f; --ink-2:#101216; --panel:#14171d; --line:#23272f;
+    --accent:#ff5a1f; --accent-dim:#c9421280; --text:#ecebe6; --muted:#8b8f98;
+    --grid:#ffffff08;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink); color:var(--text);
+    font-family:"Noto Sans SC",sans-serif; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      linear-gradient(var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:46px 46px;
+    min-height:100vh;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background:radial-gradient(ellipse 80% 50% at 50% -10%, #ff5a1f18, transparent 60%);
+  }
+  .wrap{max-width:1200px; margin:0 auto; padding:0 28px; position:relative; z-index:1}
+
+  /* ---------- header ---------- */
+  header{padding:64px 0 30px; border-bottom:1px solid var(--line)}
+  .kicker{
+    font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.32em;
+    text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:12px;
+  }
+  .kicker::before{content:""; width:34px; height:2px; background:var(--accent)}
+  h1{
+    font-family:"Big Shoulders Display",sans-serif; font-weight:900;
+    font-size:clamp(48px,9vw,116px); line-height:.92; letter-spacing:-.01em;
+    margin:18px 0 6px; text-transform:uppercase;
+  }
+  h1 .en{display:block; font-size:clamp(15px,2vw,22px); font-weight:500; letter-spacing:.04em;
+    color:var(--muted); font-family:"JetBrains Mono",monospace; text-transform:none; margin-top:14px}
+  .lead{max-width:620px; color:var(--muted); font-size:16px; margin-top:18px}
+  .stats{display:flex; gap:38px; margin-top:34px; flex-wrap:wrap}
+  .stat .n{font-family:"Big Shoulders Display",sans-serif; font-weight:800; font-size:46px; color:var(--accent); line-height:1}
+  .stat .l{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:4px}
+  .cta{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap}
+  .btn{
+    font-family:"JetBrains Mono",monospace; font-size:13px; font-weight:600; letter-spacing:.04em;
+    padding:13px 22px; border:1px solid var(--line); color:var(--text);
+    text-decoration:none; transition:.18s; display:inline-flex; align-items:center; gap:9px;
+    background:var(--panel);
+  }
+  .btn:hover{border-color:var(--accent); color:var(--accent); transform:translateY(-2px)}
+  .btn.solid{background:var(--accent); color:#140a04; border-color:var(--accent)}
+  .btn.solid:hover{background:#ff6f3d; color:#140a04; transform:translateY(-2px)}
+
+  /* ---------- toolbar ---------- */
+  .toolbar{position:sticky; top:0; z-index:5; background:#0b0c0fdd; backdrop-filter:blur(10px);
+    padding:20px 0; border-bottom:1px solid var(--line); margin-bottom:34px}
+  .search{position:relative; margin-bottom:16px}
+  .search input{
+    width:100%; background:var(--ink-2); border:1px solid var(--line); color:var(--text);
+    font-family:"JetBrains Mono",monospace; font-size:15px; padding:15px 16px 15px 44px; outline:none; transition:.18s;
+  }
+  .search input:focus{border-color:var(--accent); box-shadow:0 0 0 1px var(--accent)}
+  .search input::placeholder{color:#5b5f68}
+  .search svg{position:absolute; left:15px; top:50%; transform:translateY(-50%); stroke:var(--muted)}
+  .chips{display:flex; gap:9px; flex-wrap:wrap}
+  .chip{
+    font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.02em;
+    padding:7px 13px; border:1px solid var(--line); background:transparent; color:var(--muted);
+    cursor:pointer; transition:.15s; white-space:nowrap;
+  }
+  .chip:hover{color:var(--text); border-color:#3a3f49}
+  .chip.active{background:var(--accent); color:#140a04; border-color:var(--accent); font-weight:700}
+  .chip .c{opacity:.6; margin-left:5px}
+  .chip.active .c{opacity:.8}
+
+  /* ---------- grid ---------- */
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:16px; padding-bottom:30px}
+  .card{
+    background:var(--panel); border:1px solid var(--line); padding:22px 22px 18px;
+    text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:12px;
+    transition:transform .2s cubic-bezier(.2,.8,.2,1),border-color .2s,box-shadow .2s; position:relative; overflow:hidden;
+    animation:rise .5s both;
+  }
+  .card::after{content:""; position:absolute; left:0; top:0; width:3px; height:100%; background:var(--accent); transform:scaleY(0); transform-origin:top; transition:transform .2s}
+  .card:hover{transform:translateY(-5px); border-color:#3a3f49; box-shadow:0 18px 40px -20px #000}
+  .card:hover::after{transform:scaleY(1)}
+  .card-top{display:flex; align-items:center; justify-content:space-between; gap:10px}
+  .slug{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:16px; color:var(--text); word-break:break-all}
+  .card:hover .slug{color:var(--accent)}
+  .badge{font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); border:1px solid var(--line); padding:3px 8px; white-space:nowrap; flex-shrink:0}
+  .desc{font-size:14px; color:#c2c4c9; line-height:1.6}
+  .tags{display:flex; gap:6px; flex-wrap:wrap; margin-top:auto}
+  .tag{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--muted)}
+  .tag::before{content:"#"; color:var(--accent-dim)}
+  .empty{grid-column:1/-1; text-align:center; color:var(--muted); padding:60px 0; font-family:"JetBrains Mono",monospace}
+
+  @keyframes rise{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:translateY(0)}}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line); padding:40px 0 60px; color:var(--muted); font-size:13px}
+  footer code{font-family:"JetBrains Mono",monospace; background:var(--ink-2); border:1px solid var(--line); padding:3px 8px; color:var(--text); font-size:12px}
+  .foot-row{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center}
+  footer a{color:var(--accent); text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  @media(max-width:560px){ header{padding-top:44px} .stats{gap:24px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">中文优先 · Claude Code / Codex / Cursor / Gemini</div>
+    <h1>AI 编程内功
+      <span class="en">// 30 battle-tested skills that make your AI agent code like a 10-year veteran</span>
+    </h1>
+    <p class="lead">AI 改代码总把你项目改崩?这套技能集给它装上工程纪律——不造假 API、不乱改、先测后改、按规矩交付。</p>
+    <div class="stats">
+      <div class="stat"><div class="n" id="stat-skills">30</div><div class="l">Skills 技能</div></div>
+      <div class="stat"><div class="n" id="stat-cats">10</div><div class="l">Categories 分类</div></div>
+      <div class="stat"><div class="n">MIT</div><div class="l">License 许可</div></div>
+    </div>
+    <div class="cta">
+      <a class="btn solid" href="https://github.com/Wade-DevCode/awesome-coding-skills-cn" target="_blank" rel="noopener">★ Star on GitHub</a>
+      <a class="btn" href="https://github.com/Wade-DevCode/awesome-coding-skills-cn#快速开始--quick-start" target="_blank" rel="noopener">⤓ 一键安装</a>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="text" placeholder="搜索技能 / search by name, description, tag…" autocomplete="off" />
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <footer>
+    <div class="foot-row">
+      <div>装到 Claude Code:<code>node bin/skills.js install all</code></div>
+      <div><a href="https://github.com/Wade-DevCode/awesome-coding-skills-cn">Wade-DevCode/awesome-coding-skills-cn</a> · MIT</div>
+    </div>
+  </footer>
+</div>
+
+<script src="catalog.js"></script>
+<script>
+  const REPO = "https://github.com/Wade-DevCode/awesome-coding-skills-cn/blob/main/";
+  const CAT = {discipline:"通用纪律",frontend:"前端",backend:"后端",devops:"DevOps",security:"安全",language:"语言",testing:"测试",docs:"文档",performance:"性能",china:"中文特色"};
+  const ORDER = Object.keys(CAT);
+  const ALL = (window.SKILLS_CATALOG || []).slice().sort((a,b)=>(ORDER.indexOf(a.category)-ORDER.indexOf(b.category))||a.name.localeCompare(b.name));
+
+  let activeCat = "all";
+  let query = "";
+
+  const grid = document.getElementById("grid");
+  const chipsEl = document.getElementById("chips");
+  document.getElementById("stat-skills").textContent = ALL.length;
+  document.getElementById("stat-cats").textContent = new Set(ALL.map(s=>s.category)).size;
+
+  function buildChips(){
+    const counts = {};
+    ALL.forEach(s=>counts[s.category]=(counts[s.category]||0)+1);
+    const chips = [["all","全部",ALL.length]].concat(ORDER.filter(c=>counts[c]).map(c=>[c,CAT[c],counts[c]]));
+    chipsEl.innerHTML = chips.map(([k,label,n])=>
+      `<button class="chip${k===activeCat?' active':''}" data-cat="${k}">${label}<span class="c">${n}</span></button>`
+    ).join("");
+    chipsEl.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{activeCat=b.dataset.cat; buildChips(); render();});
+  }
+
+  function render(){
+    const q = query.trim().toLowerCase();
+    const rows = ALL.filter(s=>{
+      if(activeCat!=="all" && s.category!==activeCat) return false;
+      if(!q) return true;
+      return s.name.toLowerCase().includes(q) || s.description.toLowerCase().includes(q) || (s.tags||[]).some(t=>t.toLowerCase().includes(q));
+    });
+    if(!rows.length){ grid.innerHTML = `<div class="empty">没有匹配 “${query}” 的技能</div>`; return; }
+    grid.innerHTML = rows.map((s,i)=>`
+      <a class="card" style="animation-delay:${Math.min(i*28,420)}ms" href="${REPO}${s.path}" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="slug">${s.name}</span>
+          <span class="badge">${CAT[s.category]||s.category}</span>
+        </div>
+        <p class="desc">${s.description}</p>
+        <div class="tags">${(s.tags||[]).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+      </a>`).join("");
+  }
+
+  document.getElementById("q").addEventListener("input", e=>{query=e.target.value; render();});
+  buildChips();
+  render();
+</script>
+</body>
+</html>
