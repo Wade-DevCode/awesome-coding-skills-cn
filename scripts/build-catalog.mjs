@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync, statSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, statSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -34,6 +34,10 @@ const catOrder = ['discipline','frontend','backend','devops','security','languag
 entries.sort((a,b) => (catOrder.indexOf(a.category)-catOrder.indexOf(b.category)) || a.name.localeCompare(b.name));
 
 writeFileSync(join(root,'catalog.json'), JSON.stringify(entries, null, 2)+'\n');
+
+// Emit a browser-friendly copy for the GitHub Pages site (no fetch needed; works on file://).
+mkdirSync(join(root,'docs'), { recursive: true });
+writeFileSync(join(root,'docs','catalog.js'), 'window.SKILLS_CATALOG = '+JSON.stringify(entries)+';\n');
 
 const catLabel = {discipline:'通用纪律',frontend:'前端',backend:'后端',devops:'DevOps',security:'安全',language:'语言',testing:'测试',docs:'文档',performance:'性能',china:'中文特色'};
 let md = '';
