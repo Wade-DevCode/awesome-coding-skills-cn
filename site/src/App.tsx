@@ -106,7 +106,7 @@ export default function App() {
               transition={{ duration: 0.6, delay: 0.12 }}
               className="mt-7 max-w-xl text-lg leading-relaxed text-white/70"
             >
-              AI 改代码总把你项目改崩?这 30 个实战技能给它装上工程纪律,像 10 年老兵一样干活。
+              AI 改代码总把你项目改崩?这 {SKILLS.length} 个实战技能给它装上工程纪律,连 Unity / Cocos / Unreal / Godot 都管,像 10 年老兵一样干活。
             </motion.p>
 
             <motion.div
@@ -171,9 +171,9 @@ export default function App() {
           <div className="mb-7 flex items-end justify-between gap-4 border-t border-line pt-12">
             <div>
               <h2 className="font-display text-3xl font-bold text-[#fff6ec] sm:text-4xl">全部技能</h2>
-              <p className="mt-2 font-mono text-sm text-fog">30 skills · 10 categories · 点击卡片查看完整规则</p>
+              <p className="mt-2 font-mono text-sm text-fog">{SKILLS.length} skills · {CATEGORIES.filter((c) => counts[c.key]).length} categories · 点击卡片查看完整规则</p>
             </div>
-            <span className="hidden font-display text-6xl font-black text-line sm:block">30</span>
+            <span className="hidden font-display text-6xl font-black text-line sm:block">{SKILLS.length}</span>
           </div>
         </AnimatedContent>
 

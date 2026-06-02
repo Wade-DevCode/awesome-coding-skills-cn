@@ -20,3 +20,6 @@ docs/superpowers/
 site/node_modules/
 site/dist/
 *.tsbuildinfo
+
+# local marketing drafts (not for public repo)
+promo/

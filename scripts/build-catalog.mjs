@@ -30,7 +30,7 @@ for (const name of readdirSync(skillsDir)) {
   entries.push({ ...fm, path: `skills/${name}/SKILL.md` });
 }
 
-const catOrder = ['discipline','frontend','backend','devops','security','language','testing','docs','performance','china'];
+const catOrder = ['discipline','gamedev','frontend','backend','devops','security','language','testing','docs','performance','china'];
 entries.sort((a,b) => (catOrder.indexOf(a.category)-catOrder.indexOf(b.category)) || a.name.localeCompare(b.name));
 
 writeFileSync(join(root,'catalog.json'), JSON.stringify(entries, null, 2)+'\n');
@@ -39,7 +39,7 @@ writeFileSync(join(root,'catalog.json'), JSON.stringify(entries, null, 2)+'\n');
 mkdirSync(join(root,'site','src'), { recursive: true });
 writeFileSync(join(root,'site','src','catalog.json'), JSON.stringify(entries, null, 2)+'\n');
 
-const catLabel = {discipline:'通用纪律',frontend:'前端',backend:'后端',devops:'DevOps',security:'安全',language:'语言',testing:'测试',docs:'文档',performance:'性能',china:'中文特色'};
+const catLabel = {discipline:'通用纪律',gamedev:'游戏开发',frontend:'前端',backend:'后端',devops:'DevOps',security:'安全',language:'语言',testing:'测试',docs:'文档',performance:'性能',china:'中文特色'};
 let md = '';
 for (const cat of catOrder) {
   const rows = entries.filter(e => e.category === cat);

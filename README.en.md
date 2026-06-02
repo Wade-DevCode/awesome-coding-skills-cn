@@ -69,11 +69,12 @@ node bin/skills.js install security  # install a skill / category / all
 
 ## Skills
 
-**30 skills across 10 categories.** Full list with Chinese descriptions: see [`catalog.json`](catalog.json) or the [Chinese README](README.md#技能清单--skills). Regenerate with `node scripts/build-catalog.mjs`.
+**40 skills across 11 categories** (including a 🎮 Game Dev track). Full list with Chinese descriptions: see [`catalog.json`](catalog.json) or the [Chinese README](README.md#技能清单--skills). Regenerate with `node scripts/build-catalog.mjs`.
 
 | Category | Skills |
 |----------|--------|
 | **Discipline** | `core-discipline`, `systematic-debugging`, `test-driven`, `legacy-safe-edit`, `large-repo-refactor`, `requirement-delivery`, `naming-things`, `code-review-self` |
+| **🎮 Game Dev** | `unity-csharp`, `cocos2dx-lua`, `cocos-creator`, `unreal-cpp`, `godot-gdscript`, `game-performance`, `gameplay-architecture`, `game-netcode`, `game-assets-memory`, `game-math` |
 | **Frontend** | `frontend-best-practices` |
 | **Backend** | `api-design`, `database-safety`, `error-handling`, `concurrency-safety` |
 | **DevOps** | `docker-best-practices`, `ci-cd-pipeline`, `shell-scripting-safe` |

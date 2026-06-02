@@ -11,6 +11,21 @@
 | `systematic-debugging` | 遇到 bug、测试失败、行为异常时使用。先定位根因,再改代码,禁止瞎试。 |
 | `test-driven` | 实现功能或修 bug 前使用。先写会失败的测试,再写实现。 |
 
+### 游戏开发
+
+| 技能 | 作用 |
+|------|------|
+| `cocos-creator` | 写 Cocos Creator（TypeScript）时使用。组件、节点、prefab、事件、资源管理规范。 |
+| `cocos2dx-lua` | 写 Cocos2d-x Lua 时使用。节点、触摸、动作、调度器、ccui、内存的实战规范。 |
+| `game-assets-memory` | 管理游戏资源与内存时使用。加载/卸载、图集、包体、泄漏防治。 |
+| `game-math` | 写移动/碰撞/相机等游戏逻辑时使用。向量、插值、帧率无关。 |
+| `game-netcode` | 写多人/联网游戏时使用。同步模型、延迟、断线、防作弊。 |
+| `game-performance` | 优化游戏性能时使用。帧率、GC、Draw Call、对象池、分帧的通用规范。 |
+| `gameplay-architecture` | 设计游戏玩法代码结构时使用。状态机、解耦、避免 God object。 |
+| `godot-gdscript` | 写 Godot（GDScript/C#）时使用。节点树、signal、场景、性能规范。 |
+| `unity-csharp` | 写 Unity C# 时使用。生命周期、协程、GC、性能、序列化的实战规范。 |
+| `unreal-cpp` | 写 Unreal C++/蓝图时使用。UObject/GC、反射宏、Tick 性能、蓝图边界。 |
+
 ### 前端
 
 | 技能 | 作用 |

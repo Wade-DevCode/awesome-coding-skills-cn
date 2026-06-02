@@ -83,6 +83,116 @@
     "path": "skills/test-driven/SKILL.md"
   },
   {
+    "name": "cocos-creator",
+    "description": "写 Cocos Creator（TypeScript）时使用。组件、节点、prefab、事件、资源管理规范。",
+    "category": "gamedev",
+    "tags": [
+      "cocoscreator",
+      "typescript",
+      "组件"
+    ],
+    "path": "skills/cocos-creator/SKILL.md"
+  },
+  {
+    "name": "cocos2dx-lua",
+    "description": "写 Cocos2d-x Lua 时使用。节点、触摸、动作、调度器、ccui、内存的实战规范。",
+    "category": "gamedev",
+    "tags": [
+      "cocos2dx",
+      "lua",
+      "移动"
+    ],
+    "path": "skills/cocos2dx-lua/SKILL.md"
+  },
+  {
+    "name": "game-assets-memory",
+    "description": "管理游戏资源与内存时使用。加载/卸载、图集、包体、泄漏防治。",
+    "category": "gamedev",
+    "tags": [
+      "资源",
+      "内存",
+      "加载"
+    ],
+    "path": "skills/game-assets-memory/SKILL.md"
+  },
+  {
+    "name": "game-math",
+    "description": "写移动/碰撞/相机等游戏逻辑时使用。向量、插值、帧率无关。",
+    "category": "gamedev",
+    "tags": [
+      "数学",
+      "向量",
+      "插值"
+    ],
+    "path": "skills/game-math/SKILL.md"
+  },
+  {
+    "name": "game-netcode",
+    "description": "写多人/联网游戏时使用。同步模型、延迟、断线、防作弊。",
+    "category": "gamedev",
+    "tags": [
+      "网络",
+      "同步",
+      "多人"
+    ],
+    "path": "skills/game-netcode/SKILL.md"
+  },
+  {
+    "name": "game-performance",
+    "description": "优化游戏性能时使用。帧率、GC、Draw Call、对象池、分帧的通用规范。",
+    "category": "gamedev",
+    "tags": [
+      "性能",
+      "帧率",
+      "对象池"
+    ],
+    "path": "skills/game-performance/SKILL.md"
+  },
+  {
+    "name": "gameplay-architecture",
+    "description": "设计游戏玩法代码结构时使用。状态机、解耦、避免 God object。",
+    "category": "gamedev",
+    "tags": [
+      "架构",
+      "状态机",
+      "ecs"
+    ],
+    "path": "skills/gameplay-architecture/SKILL.md"
+  },
+  {
+    "name": "godot-gdscript",
+    "description": "写 Godot（GDScript/C#）时使用。节点树、signal、场景、性能规范。",
+    "category": "gamedev",
+    "tags": [
+      "godot",
+      "gdscript",
+      "节点"
+    ],
+    "path": "skills/godot-gdscript/SKILL.md"
+  },
+  {
+    "name": "unity-csharp",
+    "description": "写 Unity C# 时使用。生命周期、协程、GC、性能、序列化的实战规范。",
+    "category": "gamedev",
+    "tags": [
+      "unity",
+      "csharp",
+      "性能"
+    ],
+    "path": "skills/unity-csharp/SKILL.md"
+  },
+  {
+    "name": "unreal-cpp",
+    "description": "写 Unreal C++/蓝图时使用。UObject/GC、反射宏、Tick 性能、蓝图边界。",
+    "category": "gamedev",
+    "tags": [
+      "unreal",
+      "cpp",
+      "蓝图"
+    ],
+    "path": "skills/unreal-cpp/SKILL.md"
+  },
+  {
     "name": "frontend-best-practices",
     "description": "写 React/Vue 前端代码时使用。组件、状态、性能、可访问性的实战规范。",
     "category": "frontend",
