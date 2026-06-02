@@ -4,6 +4,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 [![Language: 中文/EN](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87%20%2F%20EN-blue?style=flat-square)](README.md)
 
+**🌐 Live catalog: [wade-devcode.github.io/awesome-coding-skills-cn](https://wade-devcode.github.io/awesome-coding-skills-cn/)** · **🔥 Before/after: [showcase](showcase/README.md)**
+
 ---
 
 > **Tired of AI turning your codebase into chaos? These skills make it work like a seasoned engineer — disciplined, surgical, and safe.**

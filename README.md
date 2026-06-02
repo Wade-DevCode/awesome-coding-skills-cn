@@ -5,6 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 [![Language: 中文/EN](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87%20%2F%20EN-blue?style=flat-square)](README.en.md)
 
+**🌐 在线目录:[wade-devcode.github.io/awesome-coding-skills-cn](https://wade-devcode.github.io/awesome-coding-skills-cn/)** · **🔥 实战对照:[装技能前 vs 后](showcase/README.md)**
+
 ---
 
 > **AI 改代码总把你项目改崩？这套中文技能集让它像 10 年老兵一样干活。**
