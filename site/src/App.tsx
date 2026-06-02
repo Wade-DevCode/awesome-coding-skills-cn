@@ -42,7 +42,7 @@ export default function App() {
         <div className="relative mx-auto max-w-6xl px-6 pt-10 sm:pt-14">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-2 font-mono text-sm text-white/80">
-              <Sparkles className="size-4 text-violet-300" />
+              <Sparkles className="size-4 text-coral" />
               awesome-coding-skills-cn
             </div>
             <a
@@ -62,7 +62,7 @@ export default function App() {
               transition={{ duration: 0.5 }}
               className="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-panel/60 px-4 py-1.5 font-mono text-xs text-fog backdrop-blur"
             >
-              <span className="size-1.5 rounded-full bg-emerald-400" />
+              <span className="size-1.5 rounded-full bg-gold" />
               中文优先 · Claude Code / Codex / Cursor / Gemini
             </motion.div>
 
@@ -94,7 +94,7 @@ export default function App() {
                 href={SITE}
                 target="_blank"
                 rel="noopener"
-                className="group flex items-center gap-2 rounded-full bg-white px-6 py-3 font-mono text-sm font-semibold text-ink transition hover:bg-white/90"
+                className="group flex items-center gap-2 rounded-full bg-coral px-6 py-3 font-mono text-sm font-semibold text-ink transition hover:brightness-110"
               >
                 <Star className="size-4 fill-ink" /> Star on GitHub
               </a>
@@ -132,11 +132,11 @@ export default function App() {
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="搜索技能 / search by name, description, tag…"
-              className="w-full rounded-xl border border-line bg-ink-2 py-3.5 pl-11 pr-4 font-mono text-sm text-white outline-none transition focus:border-violet-400/60 focus:ring-2 focus:ring-violet-500/20"
+              className="w-full rounded-xl border border-line bg-ink-2 py-3.5 pl-11 pr-4 font-mono text-sm text-white outline-none transition focus:border-coral/60 focus:ring-2 focus:ring-coral/20"
             />
           </div>
           <div className="flex flex-wrap gap-2">
-            <Chip active={cat === "all"} onClick={() => setCat("all")} label="全部" count={SKILLS.length} color="#c4b5fd" />
+            <Chip active={cat === "all"} onClick={() => setCat("all")} label="全部" count={SKILLS.length} color="#ff7849" />
             {CATEGORIES.filter((c) => counts[c.key]).map((c) => (
               <Chip
                 key={c.key}

@@ -21,17 +21,18 @@ export interface CatMeta {
   to: string;   // gradient end
 }
 
+// muted, warm-harmonized palette to match the editorial coral/gold theme
 export const CATEGORIES: CatMeta[] = [
-  { key: "discipline",  label: "通用纪律", en: "Discipline",  from: "#a78bfa", to: "#6366f1" },
-  { key: "frontend",    label: "前端",     en: "Frontend",    from: "#f472b6", to: "#ec4899" },
-  { key: "backend",     label: "后端",     en: "Backend",     from: "#38bdf8", to: "#0ea5e9" },
-  { key: "devops",      label: "DevOps",   en: "DevOps",      from: "#34d399", to: "#10b981" },
-  { key: "security",    label: "安全",     en: "Security",    from: "#fb7185", to: "#f43f5e" },
-  { key: "language",    label: "语言",     en: "Languages",   from: "#fbbf24", to: "#f59e0b" },
-  { key: "testing",     label: "测试",     en: "Testing",     from: "#2dd4bf", to: "#14b8a6" },
-  { key: "docs",        label: "文档",     en: "Docs",        from: "#818cf8", to: "#4f46e5" },
-  { key: "performance", label: "性能",     en: "Performance", from: "#fb923c", to: "#ea580c" },
-  { key: "china",       label: "中文特色", en: "China-first", from: "#f87171", to: "#dc2626" },
+  { key: "discipline",  label: "通用纪律", en: "Discipline",  from: "#ff7849", to: "#e8602f" },
+  { key: "frontend",    label: "前端",     en: "Frontend",    from: "#e0789e", to: "#c95f86" },
+  { key: "backend",     label: "后端",     en: "Backend",     from: "#7aa6cf", to: "#5e8bb8" },
+  { key: "devops",      label: "DevOps",   en: "DevOps",      from: "#86ab74", to: "#6c9159" },
+  { key: "security",    label: "安全",     en: "Security",    from: "#e0604f", to: "#c84736" },
+  { key: "language",    label: "语言",     en: "Languages",   from: "#e8b04b", to: "#d2963a" },
+  { key: "testing",     label: "测试",     en: "Testing",     from: "#5fb0a1", to: "#479184" },
+  { key: "docs",        label: "文档",     en: "Docs",        from: "#a394d6", to: "#867ab9" },
+  { key: "performance", label: "性能",     en: "Performance", from: "#d98a4e", to: "#c0703a" },
+  { key: "china",       label: "中文特色", en: "China-first", from: "#d2603f", to: "#b94a2c" },
 ];
 
 export const catMeta = (key: string): CatMeta =>

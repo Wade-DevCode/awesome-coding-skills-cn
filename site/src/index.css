@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Sora", sans-serif;
+  --font-display: "Fraunces", "Noto Serif SC", serif;
   --font-mono: "JetBrains Mono", monospace;
-  --font-sans: "Noto Sans SC", sans-serif;
+  --font-sans: "Hanken Grotesk", "Noto Sans SC", sans-serif;
 
-  --color-ink: #07080c;
-  --color-ink-2: #0c0e15;
-  --color-panel: #11141d;
-  --color-line: #1d212d;
-  --color-fog: #8a90a2;
+  --color-ink: #14110d;
+  --color-ink-2: #1b1712;
+  --color-panel: #211c16;
+  --color-line: #322a20;
+  --color-fog: #a59a89;
+  --color-coral: #ff7849;
+  --color-gold: #e8b04b;
 }
 
 :root { color-scheme: dark; }
@@ -17,7 +19,7 @@ html { scroll-behavior: smooth; }
 
 body {
   background: var(--color-ink);
-  color: #ecedf2;
+  color: #f4efe9;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -25,34 +27,29 @@ body {
 
 @keyframes aurora-move {
   0%   { transform: translate(0,0) scale(1); }
-  33%  { transform: translate(8%,-6%) scale(1.15); }
-  66%  { transform: translate(-6%,8%) scale(0.95); }
+  33%  { transform: translate(7%,-5%) scale(1.12); }
+  66%  { transform: translate(-5%,7%) scale(0.96); }
   100% { transform: translate(0,0) scale(1); }
-}
-@keyframes float-y {
-  0%,100% { transform: translateY(0); }
-  50%     { transform: translateY(-10px); }
 }
 
 .aurora-blob {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(72px);
-  opacity: .5;
-  animation: aurora-move 18s ease-in-out infinite;
+  filter: blur(80px);
+  opacity: .42;
+  animation: aurora-move 20s ease-in-out infinite;
   will-change: transform;
 }
 
-.grid-bg {
-  background-image:
-    linear-gradient(#ffffff08 1px, transparent 1px),
-    linear-gradient(90deg, #ffffff08 1px, transparent 1px);
-  background-size: 52px 52px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 35%, transparent 78%);
+/* warm paper grain + soft top glow instead of techy grid */
+.grain {
+  background-image: radial-gradient(#ffffff0a 1px, transparent 1px);
+  background-size: 4px 4px;
+  mask-image: radial-gradient(ellipse 75% 60% at 50% 0%, #000 30%, transparent 80%);
 }
 
 .text-gradient {
-  background: linear-gradient(120deg, #ffffff 8%, #b6a6ff 42%, #6ee7ff 72%, #5eead4 100%);
+  background: linear-gradient(115deg, #fff6ec 0%, #ffd9a0 38%, #ff7849 72%, #e8b04b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -60,5 +57,5 @@ body {
 
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--color-ink); }
-::-webkit-scrollbar-thumb { background: #232838; border-radius: 6px; }
-::-webkit-scrollbar-thumb:hover { background: #2f3548; }
+::-webkit-scrollbar-thumb { background: #3a3024; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #4a3d2d; }
