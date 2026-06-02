@@ -15,3 +15,8 @@ Thumbs.db
 
 # internal planning artifacts (superpowers specs/plans)
 docs/superpowers/
+
+# React site build
+site/node_modules/
+site/dist/
+*.tsbuildinfo

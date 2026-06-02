@@ -35,9 +35,9 @@ entries.sort((a,b) => (catOrder.indexOf(a.category)-catOrder.indexOf(b.category)
 
 writeFileSync(join(root,'catalog.json'), JSON.stringify(entries, null, 2)+'\n');
 
-// Emit a browser-friendly copy for the GitHub Pages site (no fetch needed; works on file://).
-mkdirSync(join(root,'docs'), { recursive: true });
-writeFileSync(join(root,'docs','catalog.js'), 'window.SKILLS_CATALOG = '+JSON.stringify(entries)+';\n');
+// Emit a copy for the React site to import at build time.
+mkdirSync(join(root,'site','src'), { recursive: true });
+writeFileSync(join(root,'site','src','catalog.json'), JSON.stringify(entries, null, 2)+'\n');
 
 const catLabel = {discipline:'通用纪律',frontend:'前端',backend:'后端',devops:'DevOps',security:'安全',language:'语言',testing:'测试',docs:'文档',performance:'性能',china:'中文特色'};
 let md = '';
