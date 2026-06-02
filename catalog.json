@@ -1,0 +1,322 @@
+[
+  {
+    "name": "code-review-self",
+    "description": "提交/交付前自我代码审查时使用。像 reviewer 一样挑自己的刺。",
+    "category": "discipline",
+    "tags": [
+      "自查",
+      "review"
+    ],
+    "path": "skills/code-review-self/SKILL.md"
+  },
+  {
+    "name": "core-discipline",
+    "description": "写/改任何代码前必读。约束 AI 避免造假 API、过度工程、大范围乱改。",
+    "category": "discipline",
+    "tags": [
+      "纪律",
+      "api",
+      "yagni"
+    ],
+    "path": "skills/core-discipline/SKILL.md"
+  },
+  {
+    "name": "large-repo-refactor",
+    "description": "在大型存量代码库做重构时使用。控制影响面,小步推进,不破坏现有行为。",
+    "category": "discipline",
+    "tags": [
+      "重构",
+      "大仓库"
+    ],
+    "path": "skills/large-repo-refactor/SKILL.md"
+  },
+  {
+    "name": "legacy-safe-edit",
+    "description": "在已有/老代码库里改动时使用。最大限度降低改崩存量功能的风险。",
+    "category": "discipline",
+    "tags": [
+      "老项目",
+      "安全改动"
+    ],
+    "path": "skills/legacy-safe-edit/SKILL.md"
+  },
+  {
+    "name": "naming-things",
+    "description": "命名变量/函数/类型时使用。名字表达意图,不表达实现。",
+    "category": "discipline",
+    "tags": [
+      "命名",
+      "可读性"
+    ],
+    "path": "skills/naming-things/SKILL.md"
+  },
+  {
+    "name": "requirement-delivery",
+    "description": "接到新需求、要从需求快速走到可交付时使用。先理清再动手,高效落地。",
+    "category": "discipline",
+    "tags": [
+      "需求",
+      "交付",
+      "mvp"
+    ],
+    "path": "skills/requirement-delivery/SKILL.md"
+  },
+  {
+    "name": "systematic-debugging",
+    "description": "遇到 bug、测试失败、行为异常时使用。先定位根因,再改代码,禁止瞎试。",
+    "category": "discipline",
+    "tags": [
+      "调试",
+      "根因",
+      "复现"
+    ],
+    "path": "skills/systematic-debugging/SKILL.md"
+  },
+  {
+    "name": "test-driven",
+    "description": "实现功能或修 bug 前使用。先写会失败的测试,再写实现。",
+    "category": "discipline",
+    "tags": [
+      "测试",
+      "tdd"
+    ],
+    "path": "skills/test-driven/SKILL.md"
+  },
+  {
+    "name": "frontend-best-practices",
+    "description": "写 React/Vue 前端代码时使用。组件、状态、性能、可访问性的实战规范。",
+    "category": "frontend",
+    "tags": [
+      "react",
+      "vue",
+      "性能",
+      "可访问性"
+    ],
+    "path": "skills/frontend-best-practices/SKILL.md"
+  },
+  {
+    "name": "api-design",
+    "description": "设计 HTTP/REST 接口时使用。资源命名、状态码、版本、错误响应的规范。",
+    "category": "backend",
+    "tags": [
+      "api",
+      "rest",
+      "接口"
+    ],
+    "path": "skills/api-design/SKILL.md"
+  },
+  {
+    "name": "concurrency-safety",
+    "description": "写并发/异步代码时使用。防止竞态、死锁、资源泄漏。",
+    "category": "backend",
+    "tags": [
+      "并发",
+      "竞态",
+      "锁"
+    ],
+    "path": "skills/concurrency-safety/SKILL.md"
+  },
+  {
+    "name": "database-safety",
+    "description": "写 SQL、改表结构、做数据迁移时使用。防止锁表、丢数据、慢查询。",
+    "category": "backend",
+    "tags": [
+      "数据库",
+      "sql",
+      "迁移"
+    ],
+    "path": "skills/database-safety/SKILL.md"
+  },
+  {
+    "name": "error-handling",
+    "description": "处理错误与异常时使用。不吞异常、不裸抛、给出可恢复信息。",
+    "category": "backend",
+    "tags": [
+      "错误处理",
+      "异常"
+    ],
+    "path": "skills/error-handling/SKILL.md"
+  },
+  {
+    "name": "ci-cd-pipeline",
+    "description": "配置 CI/CD 流水线时使用。快、稳、可重复、可回滚。",
+    "category": "devops",
+    "tags": [
+      "ci",
+      "cd",
+      "流水线"
+    ],
+    "path": "skills/ci-cd-pipeline/SKILL.md"
+  },
+  {
+    "name": "docker-best-practices",
+    "description": "写 Dockerfile / 容器化应用时使用。镜像小、构建快、运行安全。",
+    "category": "devops",
+    "tags": [
+      "docker",
+      "容器",
+      "镜像"
+    ],
+    "path": "skills/docker-best-practices/SKILL.md"
+  },
+  {
+    "name": "shell-scripting-safe",
+    "description": "写 shell/bash 脚本时使用。防止静默失败与误删。",
+    "category": "devops",
+    "tags": [
+      "shell",
+      "bash",
+      "脚本"
+    ],
+    "path": "skills/shell-scripting-safe/SKILL.md"
+  },
+  {
+    "name": "input-validation",
+    "description": "处理外部输入时使用。在边界统一校验，防脏数据与注入。",
+    "category": "security",
+    "tags": [
+      "校验",
+      "输入",
+      "边界"
+    ],
+    "path": "skills/input-validation/SKILL.md"
+  },
+  {
+    "name": "secrets-handling",
+    "description": "处理密钥/凭据/token 时使用。防止泄露进代码、日志、前端。",
+    "category": "security",
+    "tags": [
+      "密钥",
+      "secret",
+      "凭据"
+    ],
+    "path": "skills/secrets-handling/SKILL.md"
+  },
+  {
+    "name": "security-review",
+    "description": "审查代码安全性时使用。覆盖注入、认证、越权、敏感数据等常见风险。",
+    "category": "security",
+    "tags": [
+      "安全",
+      "审计",
+      "owasp"
+    ],
+    "path": "skills/security-review/SKILL.md"
+  },
+  {
+    "name": "go-idioms",
+    "description": "写 Go 时使用。地道 Go：错误处理、并发、接口的正确姿势。",
+    "category": "language",
+    "tags": [
+      "go",
+      "golang",
+      "惯用法"
+    ],
+    "path": "skills/go-idioms/SKILL.md"
+  },
+  {
+    "name": "node-best-practices",
+    "description": "写 Node.js 后端时使用。异步、错误、依赖与安全的实战规范。",
+    "category": "language",
+    "tags": [
+      "node",
+      "javascript",
+      "后端"
+    ],
+    "path": "skills/node-best-practices/SKILL.md"
+  },
+  {
+    "name": "python-idioms",
+    "description": "写 Python 时使用。地道、安全、可维护的 Python 写法。",
+    "category": "language",
+    "tags": [
+      "python",
+      "惯用法"
+    ],
+    "path": "skills/python-idioms/SKILL.md"
+  },
+  {
+    "name": "rust-safety",
+    "description": "写 Rust 时使用。所有权、错误处理、unsafe 的正确实践。",
+    "category": "language",
+    "tags": [
+      "rust",
+      "所有权",
+      "安全"
+    ],
+    "path": "skills/rust-safety/SKILL.md"
+  },
+  {
+    "name": "integration-testing",
+    "description": "写集成/端到端测试时使用。测真实交互,稳定不脆弱。",
+    "category": "testing",
+    "tags": [
+      "集成测试",
+      "测试"
+    ],
+    "path": "skills/integration-testing/SKILL.md"
+  },
+  {
+    "name": "test-data-management",
+    "description": "管理测试数据/fixture 时使用。可复现、隔离、易维护。",
+    "category": "testing",
+    "tags": [
+      "测试数据",
+      "fixture"
+    ],
+    "path": "skills/test-data-management/SKILL.md"
+  },
+  {
+    "name": "pr-description",
+    "description": "写 Pull Request 描述时使用。让 reviewer 快速理解与审查。",
+    "category": "docs",
+    "tags": [
+      "pr",
+      "协作"
+    ],
+    "path": "skills/pr-description/SKILL.md"
+  },
+  {
+    "name": "writing-docs",
+    "description": "写 README/技术文档时使用。让读者快速上手。",
+    "category": "docs",
+    "tags": [
+      "文档",
+      "readme"
+    ],
+    "path": "skills/writing-docs/SKILL.md"
+  },
+  {
+    "name": "performance-profiling",
+    "description": "优化性能时使用。先测量定位再优化,不凭感觉。",
+    "category": "performance",
+    "tags": [
+      "性能",
+      "profiling",
+      "优化"
+    ],
+    "path": "skills/performance-profiling/SKILL.md"
+  },
+  {
+    "name": "chinese-commit",
+    "description": "写 git commit 时使用。生成规范的 Conventional Commits(英文 type + 中文主题),主题精炼。",
+    "category": "china",
+    "tags": [
+      "commit",
+      "git",
+      "规范"
+    ],
+    "path": "skills/chinese-commit/SKILL.md"
+  },
+  {
+    "name": "domestic-stack",
+    "description": "写 uniapp / 微信小程序 / SpringBoot 代码时使用。贴合国内主流技术栈的实战规范。",
+    "category": "china",
+    "tags": [
+      "uniapp",
+      "小程序",
+      "springboot"
+    ],
+    "path": "skills/domestic-stack/SKILL.md"
+  }
+]

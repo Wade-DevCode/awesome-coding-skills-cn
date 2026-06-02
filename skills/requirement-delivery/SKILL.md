@@ -1,6 +1,8 @@
 ---
 name: requirement-delivery
 description: 接到新需求、要从需求快速走到可交付时使用。先理清再动手,高效落地。
+category: discipline
+tags: [需求, 交付, mvp]
 ---
 
 # 接需求提效

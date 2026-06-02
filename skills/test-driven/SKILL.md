@@ -1,6 +1,8 @@
 ---
 name: test-driven
 description: 实现功能或修 bug 前使用。先写会失败的测试,再写实现。
+category: discipline
+tags: [测试, tdd]
 ---
 
 # 测试驱动

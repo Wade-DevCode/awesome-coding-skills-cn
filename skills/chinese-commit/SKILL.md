@@ -1,6 +1,8 @@
 ---
 name: chinese-commit
 description: 写 git commit 时使用。生成规范的 Conventional Commits(英文 type + 中文主题),主题精炼。
+category: china
+tags: [commit, git, 规范]
 ---
 
 # 中文 commit 规范

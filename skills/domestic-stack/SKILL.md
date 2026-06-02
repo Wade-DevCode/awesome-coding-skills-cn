@@ -1,6 +1,8 @@
 ---
 name: domestic-stack
 description: 写 uniapp / 微信小程序 / SpringBoot 代码时使用。贴合国内主流技术栈的实战规范。
+category: china
+tags: [uniapp, 小程序, springboot]
 ---
 
 # 国内技术栈适配
