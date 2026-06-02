@@ -12,3 +12,6 @@ Thumbs.db
 
 # bash crash dumps
 *.stackdump
+
+# internal planning artifacts (superpowers specs/plans)
+docs/superpowers/
