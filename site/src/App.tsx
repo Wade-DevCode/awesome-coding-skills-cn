@@ -4,6 +4,9 @@ import { Search, Star, Terminal, Sparkles, ArrowRight } from "lucide-react";
 import Particles from "./reactbits/Particles";
 import BlurText from "./reactbits/BlurText";
 import CountUp from "./reactbits/CountUp";
+import RotatingText from "./reactbits/RotatingText";
+import ShinyText from "./reactbits/ShinyText";
+import AnimatedContent from "./reactbits/AnimatedContent";
 import SkillCard from "./components/SkillCard";
 import { SKILLS, CATEGORIES, REPO, countByCat } from "./data";
 
@@ -79,32 +82,49 @@ export default function App() {
             </a>
           </nav>
 
-          <div className="py-16 sm:py-24">
+          <div className="py-14 sm:py-20">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-panel/60 px-4 py-1.5 font-mono text-xs text-fog backdrop-blur"
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-panel/60 px-4 py-1.5 font-mono text-xs backdrop-blur"
             >
               <span className="size-1.5 rounded-full bg-gold" />
-              中文优先 · Claude Code / Codex / Cursor / Gemini
+              <ShinyText text="中文优先 · Claude Code / Codex / Cursor / Gemini" color="#9a8f7d" shineColor="#ffd9a0" speed={5} />
             </motion.div>
 
             <BlurText
               text="AI 编程内功"
               animateBy="words"
               delay={180}
-              className="font-display text-6xl font-black leading-[0.95] tracking-tight text-[#fff6ec] sm:text-8xl"
+              className="font-display text-6xl font-black leading-[0.98] text-[#fff6ec] sm:text-8xl"
             />
 
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.12 }}
-              className="mt-6 max-w-xl text-lg leading-relaxed text-white/70"
+              className="mt-7 max-w-xl text-lg leading-relaxed text-white/70"
             >
-              AI 改代码总把你项目改崩?这 30 个实战技能给它装上工程纪律 —— 不造假 API、不乱改、先测后改、按规矩交付。
+              AI 改代码总把你项目改崩?这 30 个实战技能给它装上工程纪律,像 10 年老兵一样干活。
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.16 }}
+              className="mt-5 flex items-center gap-3 font-display text-2xl text-white/45 sm:text-3xl"
+            >
+              <span>让 AI</span>
+              <RotatingText
+                texts={["不造假 API", "不乱改无关代码", "先测后改", "找根因不吞异常", "按规矩交付"]}
+                rotationInterval={2200}
+                staggerDuration={0.02}
+                splitLevelClassName="overflow-hidden"
+                mainClassName="rounded-xl bg-coral px-3 py-1 font-semibold text-ink"
+                transition={{ type: "spring", damping: 28, stiffness: 340 }}
+              />
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -147,6 +167,16 @@ export default function App() {
 
       {/* ---------------- CATALOG ---------------- */}
       <section className="relative mx-auto max-w-6xl px-6 pb-28">
+        <AnimatedContent distance={60} duration={0.7} ease="power3.out" threshold={0.15}>
+          <div className="mb-7 flex items-end justify-between gap-4 border-t border-line pt-12">
+            <div>
+              <h2 className="font-display text-3xl font-bold text-[#fff6ec] sm:text-4xl">全部技能</h2>
+              <p className="mt-2 font-mono text-sm text-fog">30 skills · 10 categories · 点击卡片查看完整规则</p>
+            </div>
+            <span className="hidden font-display text-6xl font-black text-line sm:block">30</span>
+          </div>
+        </AnimatedContent>
+
         <div className="sticky top-0 z-20 -mx-6 mb-8 border-b border-line bg-ink/80 px-6 py-5 backdrop-blur-xl">
           <div className="relative mb-4">
             <Search className="absolute left-4 top-1/2 size-4 -translate-y-1/2 text-fog" />
@@ -172,7 +202,7 @@ export default function App() {
           </div>
         </div>
 
-        <motion.div layout className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div layout className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {rows.map((s) => (
               <SkillCard key={s.name} skill={s} />
