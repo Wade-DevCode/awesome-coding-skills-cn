@@ -52,17 +52,20 @@ cp AGENTS.md /your/project/
 
 ## Skills
 
-| Skill | What it does |
-|-------|--------------|
-| `core-discipline` | No hallucinated APIs, surgical edits only, YAGNI, read before you touch |
-| `systematic-debugging` | Reproduce first, read the real stack trace, bisect, fix the root cause |
-| `test-driven` | Full TDD loop: write failing test → minimal implementation → full suite green |
-| `legacy-safe-edit` | Map the impact before touching, follow existing conventions, small reversible commits |
-| `frontend-best-practices` | React/Vue single-responsibility components, colocated state, no stale closures, a11y by default |
-| `chinese-commit` | English type + Chinese subject, imperative mood, one thing per commit, real module names for scope |
-| `domestic-stack` | No DOM APIs in mini-programs, conditional compilation for cross-platform, official WeChat login flow, clean SpringBoot layering |
-| `requirement-delivery` | Clarify acceptance criteria first, split MVP and prioritize core path, reuse before building, verify as you go, deliver runnable output |
-| `large-repo-refactor` | Add characterization tests first, behavior-only refactor, single transformation per commit, prefer IDE/codemod over regex, analyze impact before touching |
+**30 skills across 10 categories.** Full list with Chinese descriptions: see [`catalog.json`](catalog.json) or the [Chinese README](README.md#技能清单--skills). Regenerate with `node scripts/build-catalog.mjs`.
+
+| Category | Skills |
+|----------|--------|
+| **Discipline** | `core-discipline`, `systematic-debugging`, `test-driven`, `legacy-safe-edit`, `large-repo-refactor`, `requirement-delivery`, `naming-things`, `code-review-self` |
+| **Frontend** | `frontend-best-practices` |
+| **Backend** | `api-design`, `database-safety`, `error-handling`, `concurrency-safety` |
+| **DevOps** | `docker-best-practices`, `ci-cd-pipeline`, `shell-scripting-safe` |
+| **Security** | `security-review`, `secrets-handling`, `input-validation` |
+| **Languages** | `python-idioms`, `go-idioms`, `rust-safety`, `node-best-practices` |
+| **Testing** | `integration-testing`, `test-data-management` |
+| **Docs** | `writing-docs`, `pr-description` |
+| **Performance** | `performance-profiling` |
+| **China-specific** | `chinese-commit`, `domestic-stack` |
 
 ---
 
