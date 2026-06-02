@@ -16,6 +16,12 @@
 | 技能 | 作用 |
 |------|------|
 | `cocos-creator` | 写 Cocos Creator（TypeScript）时使用。组件、节点、prefab、事件、资源管理规范。 |
+| `cocos-creator-adaptation` | 做 Cocos Creator 多机型/多分辨率适配时使用。Canvas、Widget、安全区。 |
+| `cocos-creator-bundle` | Cocos Creator 用 AssetBundle 做分包/远程资源时使用。加载、释放、依赖、缓存。 |
+| `cocos-creator-drawcall` | 优化 Cocos Creator 渲染性能时使用。合批、图集、动静分离、Label。 |
+| `cocos-creator-hotupdate` | 给 Cocos Creator 原生包做热更新时使用。version manifest、增量、校验、回滚。 |
+| `cocos-creator-tween-anim` | 写 Cocos Creator 动效/动画时使用。tween、Animation、Spine、性能与清理。 |
+| `cocos-creator-ui-list` | 做 Cocos Creator 大量条目列表时使用。虚拟列表、节点复用。 |
 | `cocos2dx-lua` | 写 Cocos2d-x Lua 时使用。节点、触摸、动作、调度器、ccui、内存的实战规范。 |
 | `game-assets-memory` | 管理游戏资源与内存时使用。加载/卸载、图集、包体、泄漏防治。 |
 | `game-math` | 写移动/碰撞/相机等游戏逻辑时使用。向量、插值、帧率无关。 |
