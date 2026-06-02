@@ -59,6 +59,10 @@ cp AGENTS.md /your/project/
 | `test-driven` | Full TDD loop: write failing test → minimal implementation → full suite green |
 | `legacy-safe-edit` | Map the impact before touching, follow existing conventions, small reversible commits |
 | `frontend-best-practices` | React/Vue single-responsibility components, colocated state, no stale closures, a11y by default |
+| `chinese-commit` | English type + Chinese subject, imperative mood, one thing per commit, real module names for scope |
+| `domestic-stack` | No DOM APIs in mini-programs, conditional compilation for cross-platform, official WeChat login flow, clean SpringBoot layering |
+| `requirement-delivery` | Clarify acceptance criteria first, split MVP and prioritize core path, reuse before building, verify as you go, deliver runnable output |
+| `large-repo-refactor` | Add characterization tests first, behavior-only refactor, single transformation per commit, prefer IDE/codemod over regex, analyze impact before touching |
 
 ---
 
