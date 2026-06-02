@@ -50,6 +50,21 @@ cp AGENTS.md /your/project/
 
 ---
 
+### Option C — CLI (browse & install on demand)
+
+A zero-dependency Node CLI (Node 16+) ships in the repo:
+
+```bash
+node bin/skills.js list              # list all 30 skills by category
+node bin/skills.js search docker     # search name/description/tags
+node bin/skills.js info core-discipline   # show one skill in full
+node bin/skills.js install security  # install a skill / category / all
+```
+
+`install` copies skills into `~/.claude/skills/`. Data source: `catalog.json`.
+
+---
+
 ## Skills
 
 **30 skills across 10 categories.** Full list with Chinese descriptions: see [`catalog.json`](catalog.json) or the [Chinese README](README.md#技能清单--skills). Regenerate with `node scripts/build-catalog.mjs`.
