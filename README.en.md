@@ -93,6 +93,7 @@ node bin/skills.js install security  # install a skill / category / all
 | **Claude Code** | Option A (install script) or Option B (`CLAUDE.md` in project root) |
 | **Codex / Cursor / Gemini CLI** | Option B — drop `AGENTS.md` in project root |
 | **Any AI with a system prompt** | Paste the contents of `CLAUDE.md` into your system prompt |
+| **Auto-enforce** | Configure [`hooks/`](hooks/) to inject discipline into every turn |
 
 ---
 
@@ -102,6 +103,14 @@ node bin/skills.js install security  # install a skill / category / all
 - **Rules with "why" and counterexamples** — the AI doesn't just skim a checklist; it understands the reasoning and actually follows it
 - **Works across tools** — Claude Code skills + `CLAUDE.md` + `AGENTS.md` covers the major AI coding platforms
 - **Chinese-first for precision** — written in Chinese so there's no semantic loss from translation; bilingual for accessibility
+
+---
+
+## ⭐ Found it useful?
+
+Star the repo so more developers discover it — it's the biggest way to help. PRs welcome (see [CONTRIBUTING](CONTRIBUTING.md)).
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Wade-DevCode/awesome-coding-skills-cn&type=Date)](https://star-history.com/#Wade-DevCode/awesome-coding-skills-cn&Date)
 
 ---
 

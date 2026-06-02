@@ -1,0 +1,19 @@
+{
+  "_comment": "把下面 hooks 块合并进 ~/.claude/settings.json(全局)或项目 .claude/settings.json。把 /绝对路径/ 换成本仓库 hooks 目录的真实绝对路径。Windows 用户见 hooks/README.md 的 PowerShell 版本。",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash /绝对路径/awesome-coding-skills-cn/hooks/inject-discipline.sh" }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash /绝对路径/awesome-coding-skills-cn/hooks/inject-discipline.sh" }
+        ]
+      }
+    ]
+  }
+}
