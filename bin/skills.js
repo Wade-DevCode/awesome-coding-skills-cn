@@ -10,9 +10,9 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const skillsDir = join(root, 'skills');
 
 const CAT_LABEL = {
-  discipline: '通用纪律', frontend: '前端', backend: '后端', devops: 'DevOps',
-  security: '安全', language: '语言', testing: '测试', docs: '文档',
-  performance: '性能', china: '中文特色',
+  discipline: '通用纪律', gamedev: '游戏开发', frontend: '前端', backend: '后端',
+  devops: 'DevOps', security: '安全', language: '语言', testing: '测试',
+  docs: '文档', performance: '性能', china: '中文特色',
 };
 const CAT_ORDER = Object.keys(CAT_LABEL);
 

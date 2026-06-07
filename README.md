@@ -11,7 +11,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 [![Language: 中文/EN](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87%20%2F%20EN-blue?style=flat-square)](README.en.md)
 
-**🌐 在线目录:[wade-devcode.github.io/awesome-coding-skills-cn](https://wade-devcode.github.io/awesome-coding-skills-cn/)** · **🔥 实战对照:[装技能前 vs 后](showcase/README.md)**
+**🌐 在线目录:[wade-devcode.github.io/awesome-coding-skills-cn](https://wade-devcode.github.io/awesome-coding-skills-cn/)** · **🔥 实战对照:[装技能前 vs 后](showcase/README.md)** · **📝 更新日志:[CHANGELOG](CHANGELOG.md)**
 
 ---
 

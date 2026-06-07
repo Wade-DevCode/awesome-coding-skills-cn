@@ -6,7 +6,7 @@
 
 1. 复制模板:`skills/_TEMPLATE.md` → `skills/<英文-kebab-slug>/SKILL.md`。
 2. 填好 frontmatter:`name` / `description` / `category` / `tags`。
-   - `category` 取值:`discipline` `frontend` `backend` `devops` `security` `language` `testing` `docs` `performance` `china`。
+   - `category` 取值:`discipline` `gamedev` `frontend` `backend` `devops` `security` `language` `testing` `docs` `performance` `china`。
 3. 正文四节:`## 何时用` / `## 核心规则` / `## 正例 / 反例` / `## 自查清单`。
 4. 质量底线:**地道中文、资深工程师视角、每条规则带"为什么 + 正反例"、禁翻译腔。** 参考 `skills/core-discipline/SKILL.md`。
 5. 重新生成目录:`node scripts/build-catalog.mjs`(会更新 `catalog.json` 与站点数据)。
