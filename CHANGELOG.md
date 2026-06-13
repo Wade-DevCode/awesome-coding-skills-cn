@@ -1,5 +1,13 @@
 # 更新日志 / Changelog
 
+## 2026-06-13
+
+### 新增
+
+- 新增 [`docs/skill-combo-playbook.md`](docs/skill-combo-playbook.md)：按真实任务场景给出技能组合、可复制提示词模板、交付验收清单和常见反模式。
+- README 增加“技能组合手册”入口，方便新用户从安装走到实际项目落地。
+- 新增根目录 `package.json`，声明 ESM 模块类型并提供目录生成/校验脚本，修复 `node bin/skills.js` 在 Node 下的模块解析问题。
+
 ## 2026-06-07
 
 ### 修复
